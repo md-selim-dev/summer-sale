@@ -200,20 +200,20 @@
       <div class="cupone-part p-4 bg-[#ffffff] rounded-lg mb-8">
         <label for="" class="text-xl">Have Coupon?</label>
         <div class="flex">
-          <input class="outline-none border border-r-0 rounded-l-md pl-4" type="text" name="" id="" placeholder="Coupon Code">
-          <input class="btn-md btn rounded-l-none text-white hover:bg-transparent hover:border-amber-700 hover:text-amber-700 bg-[#E527B2]" type="button" value="Apply">
+          <input id="coupon-code" class="outline-none border border-r-0 rounded-l-md pl-4" type="text" name="" id="" placeholder="Coupon Code">
+          <input id="apply-button" class="btn-md btn rounded-l-none text-white hover:bg-transparent hover:border-amber-700 hover:text-amber-700 bg-[#E527B2]" type="button" value="Apply">
         </div>
       </div>
 
       <div class="count-part rounded-lg p-4 bg-[#ffffff] mt-4">
-        <div class="items">
+        <div id="items">
 
         </div>
-        <hr>
+        <hr class="mt-4">
         <div class="mt-4 ">
-          <p>Total Price: <span></span></p>
-          <p>Discount: <span></span></p>
-          <p>Total: <span></span></p>
+          <p>Total Price: <span id="total-price"></span></p>
+          <p>Discount: <span id="discount-price"></span></p>
+          <p>Total: <span id="sub-total-price"></span></p>
           <hr class="mt-4 mb-4">
           <button class="btn text-white hover:bg-transparent hover:border-amber-700 hover:text-amber-700 bg-[#E527B2] w-full">Make Purchase</button>
         </div>
@@ -224,6 +224,8 @@
   <footer>
 
   </footer>
+
+  <script src="scripts/scripts.js"></script>
 </body>
 
 </html>

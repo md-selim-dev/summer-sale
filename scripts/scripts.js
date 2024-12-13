@@ -19,7 +19,9 @@ for(const product of products){
     totalPrice = price + totalPrice;
     
     const totalPriceElement = document.getElementById('total-price');
+    const subTotalPriceElement = document.getElementById('sub-total-price');
     totalPriceElement.innerText = totalPrice
+    subTotalPriceElement.innerText = totalPrice
   })
 }
 
@@ -52,3 +54,32 @@ applyButton.addEventListener('click', function(){
     couponCodeElement.value = ''
   }
 })
+
+
+function showModal(){
+  const subTotalPriceElement = document.getElementById('sub-total-price').innerText;
+  const subTotalPrice = parseFloat(subTotalPriceElement);
+  
+  if(subTotalPrice > 0){
+  const header = document.getElementById('header');
+  header.classList.add('hidden')
+  const container = document.getElementById('container')
+  container.classList.add('hidden')
+
+  const modal = document.getElementById('modal');
+  modal.classList.remove('hidden')
+  }else{
+    alert('Buy at least 1 product')
+  }
+
+}
+
+function showHome(){
+  const header = document.getElementById('header');
+  header.classList.remove('hidden')
+  const container = document.getElementById('container')
+  container.classList.remove('hidden')
+
+  const modal = document.getElementById('modal');
+  modal.classList.add('hidden')
+}
